@@ -16,6 +16,8 @@
     
     <?php 
         include 'php/Navbar.php';
+        if(!empty($_SESSION["username"])) 
+            header('refresh:0;url=index.php');
     ?>
     <div class="container">
         <div class="row">

@@ -1,3 +1,1 @@
 1. in Loginresponse e Registrationresponse, ci sono i vari return. trovare il modo per sostituirli per fare scendere sotto all-echo
-
-2. controllare se login, registrazione, logout vada tutto liscio

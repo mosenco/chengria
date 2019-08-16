@@ -59,7 +59,8 @@ if(isset($_SESSION) && !empty($_SESSION["username"])) {
 
     $stmt->close();
     $conn->close();
-    $response = "Registrazione avvenuta con successo<br> Effettua il login";
+    $response = "Registrazione avvenuta con successo<br> Verrai indirizzato alla pagina del login";
+    header("Refresh:3; url=../Login.php");
 
 }
 echo '<!DOCTYPE html>
@@ -84,11 +85,11 @@ echo '<!DOCTYPE html>
     
     
     
-    <h1 class="display-1 font-weight-bold text-danger text-center">   
+    <p class="display-3 font-weight-bold text-danger text-center">   
     
     '.$response.'
     
-    </h1>
+    </p>
     
     
    

@@ -9,6 +9,7 @@ if(isset($_SESSION) &&  !empty($_SESSION["username"])) {
     $response = "Sei già loggato";
     
 }else{
+    $response = "Caricamento...";
 
     include "../db/mysql_credentials.php";
 
@@ -39,17 +40,18 @@ if(isset($_SESSION) &&  !empty($_SESSION["username"])) {
     $password = sha1(trim($_POST["Pass"]," "));
 
     if(!$stmt->execute()) {
-        $response = "errore durante l'operazione, riprovare";
+        $response = "Errore durante l'operazione, riprovare";
         $stmt->close();
         $conn->close();
         return;
     }
 
-    //salvo i risultati cn i seguenti metodi
+    //salvo i risultati con i seguenti metodi
     $stmt->store_result();
     $stmt->bind_result($id,$imgprofilo); // passo variabili in cui memorizzare
     $stmt->fetch();
 
+    //check sulla correttezza dei dati
     if($stmt->num_rows != 1) {
         $response = "Username o password sbagliato";
         $stmt->close();
@@ -66,8 +68,7 @@ if(isset($_SESSION) &&  !empty($_SESSION["username"])) {
 
     $stmt->close();
     $conn->close();
-
-    header('refresh:3;url= ../index.php');
+    header('refresh:0;url= ../index.php');
 }
 echo '<!DOCTYPE html>
 <html lang="it">
