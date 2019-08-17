@@ -1,7 +1,6 @@
 'use strict';
 
 function checkFormat(value){
-    console.log("sono dentro");
     var regex = null;
     switch(value){
         case "Username":
@@ -14,13 +13,11 @@ function checkFormat(value){
             regex = /(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}/;
             break;
     }
-    console.log(regex.test(document.getElementById(value).value));
     return regex.test(document.getElementById(value).value);
 }
 
 function checkValue(value) {
     if(!checkFormat(value)){
-        console.log("sono dentro perchè " + !checkFormat(value));
         var validation = document.getElementById(value);
         if (validation.classList.contains("is-valid")) 
             validation.classList.remove("is-valid");

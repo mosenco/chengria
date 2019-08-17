@@ -1,4 +1,6 @@
 <?php include 'php/session.php';
+ if(!empty($_SESSION["username"])) 
+ header('refresh:0;url=index.php');
 ?>
 <!DOCTYPE html>
 <html lang="it">
@@ -14,9 +16,6 @@
     
     <?php 
         include 'php/Navbar.php';
-        if(!empty($_SESSION["username"])) 
-            header('refresh:0;url=index.php');
-        
     ?>
     
     <div class="container">

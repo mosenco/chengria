@@ -1,5 +1,8 @@
 <?php
-    include "db/mysql_credentials.php";
+    if (file_exists("db/mysql_credentials.php"))
+        include "db/mysql_credentials.php";
+    else
+        include "../db/mysql_credentials.php";
     $conn = new mysqli($mysql_server, $mysql_user, $mysql_pass, $mysql_db);
 if(session_id() == '') {
     session_start();
