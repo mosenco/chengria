@@ -30,7 +30,21 @@
     
         <div class="container">
             <h1 class="display-1 font-weight-bold text-danger text-center">SEI LOGGATO xd</h1>
+    </div>
+    <div class="container-fluid">
+            <div class="row">
+                <div class="col"> sezione menu</div>
+                <div class="col"> 
+                <a href="ViewGame.php">
+                    <img src="images/148910_preview.png" alt="..." class="img-thumbnail" style="width:200px; height:200px;">
+               
+                    <p>Chess Game</p>
+                    <p class=" text-muted ">Gioco di scacchi figo, da provare xd</p>
+                </a>   
+            </div>
+
         
+            </div>
         </div>
         
    
