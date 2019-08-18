@@ -13,7 +13,7 @@
  
     <title>Benvenuti a GamingDevNet</title>
 </head>
-<body>
+<body onload="LoadGameList()">
     
     
     <?php 
@@ -35,16 +35,15 @@
             <div class="row">
                 <div class="col"> sezione menu</div>
                 <div class="col"> 
-                <a href="ViewGame.php?game=testgame">
-                    <img src="images/148910_preview.png" alt="..." class="img-thumbnail" style="width:200px; height:200px;">
-                    <p>Chess Game</p>
+                <form action="ViewGame.php" method="post">
+                    
+                    <input type="image" src="images/148910_preview.png" alt="..." class="img-thumbnail" style="width:200px; height:200px;">
+                    
+                    <p id="test">Chess Game</p>
                     <p class=" text-muted ">Gioco di scacchi figo, da provare xd</p>
-                </a> 
-                <a href="ViewGame.php?game=2048">
-                    <img src="images/148910_preview.png" alt="..." class="img-thumbnail" style="width:200px; height:200px;">
-                    <p>2048</p>
-                    <p class=" text-muted ">2048 ora anche sul web!</p>
-                </a>   
+                   
+                    <input type="hidden" name="gameName" value="testgame">
+                </form>
             </div>
 
         

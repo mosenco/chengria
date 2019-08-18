@@ -2,18 +2,20 @@
 if(empty($_SESSION["username"])) 
     header('refresh:0;url=index.php');
 $username = $_SESSION['username'];
+include 'php/RetrieveData.php';
 ?>
 
 <!DOCTYPE html>
 <html lang="it">
 
 <head>
+
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
-    <title>GamingDevNet - <?php echo $_GET["game"]?>></title>
+    <title>GamingDevNet - Profilo</title>
 </head>
 
 <body>
@@ -23,7 +25,7 @@ $username = $_SESSION['username'];
 
     <div class="container">
         <div class="embed-responsive embed-responsive-16by9">
-        <iframe class="embed-responsive-item" src="games/<?php echo $_GET["game"]?>"></iframe>
+        <iframe class="embed-responsive-item" src="<?php echo $_POST['gameName'];?>"></iframe>
         </div>
 
         <div class="row">
