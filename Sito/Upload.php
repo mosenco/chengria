@@ -13,7 +13,7 @@ $username = $_SESSION['username'];
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
-    <title>GamingDevNet - <?php echo $_GET["game"]?>></title>
+    <title>GamingDevNet - Carica il tuo gioco!></title>
 </head>
 
 <body>
@@ -21,25 +21,14 @@ $username = $_SESSION['username'];
         include 'php/Navbar.php';
     ?>
 
-    <div class="container">
-        <div class="embed-responsive embed-responsive-16by9">
-        <iframe class="embed-responsive-item" src="games/<?php echo $_GET["game"]?>"></iframe>
-        </div>
-
-        <div class="row">
-            <div class="col">
-                <p> sezione classifica </p>
-            </div>
-            <div class="col">
-                <p> sezione commenti </p>
-            </div>
-        </div>
-    </div>
-
-
+    <!-- Upload di zip --->
+    <form enctype="multipart/form-data" method="POST" action="php/UploadZip.php">
+    <label>Carica la cartella zip contenente la cartella del gioco --> <input type="file" name="zip_file" accept="zip/*"/></label>
+    <br />
+    <input type="submit" class="btn btn-danger" id="Submit"   value="Caricalo ora!">
+    </form>
     
-
- 
+    
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
         integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
     </script>

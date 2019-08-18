@@ -34,6 +34,7 @@ if(empty($_SESSION["username"])){
         
         <div class="collapse navbar-collapse justify-content-end" id="navbarNavAltMarkup">
             <div class="navbar-nav ">
+                <a class="nav-item nav-link" href="Upload.php">Carica gioco</a>
                 <a class="nav-item nav-link" href="Profilo.php">Profilo</a>
                 <a class="nav-item nav-link" href="php/Logout.php">Esci</a>
             </div>
