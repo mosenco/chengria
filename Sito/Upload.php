@@ -22,7 +22,7 @@ $username = $_SESSION['username'];
     ?>
 
     <!-- Upload di zip --->
-    <form enctype="multipart/form-data" method="POST" action="php/UploadZip.php">
+    <form enctype="multipart/form-data" method="POST" action="php/uploadZip.php">
     <label>Carica la cartella zip contenente la cartella del gioco --> <input type="file" name="zip_file" accept="zip/*"/></label>
     <br />
     <input type="submit" class="btn btn-danger" id="Submit"   value="Caricalo ora!">

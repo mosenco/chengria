@@ -47,7 +47,7 @@ if ($uploadOk == 0) {
 
 /* da mettere su html poi
 
- <form action="php/UploadToGames.php" method="post" enctype="multipart/form-data">
+ <form action="php/uploadToGames.php" method="post" enctype="multipart/form-data">
     Select image to upload:
     <input type="file" name="fileToUpload" id="fileToUpload">
     <input type="submit" value="Upload Image" name="submit">

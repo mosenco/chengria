@@ -145,7 +145,7 @@ include 'php/retrieveData.php';
         aria-hidden="true">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
-                <form target="_blank" name="imageChange" action="php/UploadToAvatars.php" method="post" enctype="multipart/form-data">
+                <form target="_blank" name="imageChange" action="php/uploadToAvatars.php" method="post" enctype="multipart/form-data">
                     <div class="modal-header">
                         <h5 class="modal-title" id="exampleModalLabel">Modifica la tua immagine profilo</h5>
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
@@ -224,8 +224,8 @@ include 'php/retrieveData.php';
 
 
 
-    <script src="js/RegistrationControl.js"></script>
-    <script src="js/ModifyProfile.js"></script>
+    <script src="js/registrationControl.js"></script>
+    <script src="js/modifyProfile.js"></script>
 
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
         integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">

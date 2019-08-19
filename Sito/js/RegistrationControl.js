@@ -13,6 +13,8 @@ function checkFormat(value){
             regex = /(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}/;
             break;
     }
+    console.log("regex: " + regex);
+    console.log(regex.test(document.getElementById(value).value));
     return regex.test(document.getElementById(value).value);
 }
 
@@ -39,7 +41,7 @@ function checkValue(value) {
     var usernameValue = document.getElementById(value).value; 
     var request = new XMLHttpRequest();
    
-    request.open('GET', 'php/RegistrationControl.php?' + value + '=' + usernameValue + "&subject=" + value);
+    request.open('GET', 'php/registrationControl.php?' + value + '=' + usernameValue + "&subject=" + value);
     request.onload = function () {
         var obj = JSON.parse(request.responseText);
         var ris = "risultato: ";

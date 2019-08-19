@@ -3,7 +3,7 @@ if(empty($_SESSION["username"])){
     
     echo '<nav class="navbar navbar-expand-lg sticky-top navbar-light bg-light">
         
-        <a class="navbar-brand" href="Index.php">
+        <a class="navbar-brand" href="index.php">
             <img src="images/bootstrap-solid.svg" width="30" height="30" class="d-inline-block align-top" alt="">
             Bootstrap
         </a>
@@ -14,15 +14,15 @@ if(empty($_SESSION["username"])){
         
         <div class="collapse navbar-collapse justify-content-end" id="navbarNavAltMarkup">
             <div class="navbar-nav ">
-                <a class="nav-item nav-link" href="Login.php">Login</a>
-                <a href="Registration.php"><button type="button" class="btn btn-danger">Registrati</button></a>
+                <a class="nav-item nav-link" href="login.php">Login</a>
+                <a href="registration.php"><button type="button" class="btn btn-danger">Registrati</button></a>
             </div>
         </div>
     </nav>';
 }else{
     echo '<nav class="navbar navbar-expand-lg sticky-top navbar-light bg-light">
         
-        <a class="navbar-brand" href="Index.php">
+        <a class="navbar-brand" href="index.php">
             <img src="images/bootstrap-solid.svg" width="30" height="30" class="d-inline-block align-top" alt="">
             Bootstrap
         </a>
@@ -33,9 +33,9 @@ if(empty($_SESSION["username"])){
         
         <div class="collapse navbar-collapse justify-content-end" id="navbarNavAltMarkup">
             <div class="navbar-nav ">
-                <a class="nav-item nav-link" href="Upload.php">Carica gioco</a>
-                <a class="nav-item nav-link" href="Profilo.php">Profilo</a>
-                <a class="nav-item nav-link" href="php/Logout.php">Esci</a>
+                <a class="nav-item nav-link" href="upload.php">Carica gioco</a>
+                <a class="nav-item nav-link" href="profilo.php">Profilo</a>
+                <a class="nav-item nav-link" href="php/logout.php">Esci</a>
             </div>
         </div>
     </nav>';

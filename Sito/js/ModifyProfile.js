@@ -10,7 +10,7 @@ function confirm(username){
     };
     console.log(document.getElementById('fileToUpload').value);
 
-    xhttp.open("POST", "php/ModifyProfile.php", true);
+    xhttp.open("POST", "php/modifyProfile.php", true);
     xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
     xhttp.send("Username=" + username + "&Email=" + document.getElementById('Email').value + "&Avatar=" + 
     document.getElementById('fileToUpload').value + "&Nome=" + document.getElementById("Name").value +
@@ -31,7 +31,7 @@ function confirmPassword(username){
         }
     };
 
-    xhttp.open("POST", "php/ModifyPassword.php", true);
+    xhttp.open("POST", "php/modifyPassword.php", true);
     xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
     xhttp.send("Username=" + username + "&OldPw=" + document.getElementById("password1").value + 
     "&NewPw=" + document.getElementById("password2").value);
@@ -48,7 +48,7 @@ function confirmImage(username){
         }
     };
 
-    xhttp.open("POST", "php/ModifyImage.php", true);
+    xhttp.open("POST", "php/modifyImage.php", true);
     xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
     xhttp.send("Username=" + username + "&img=" + document.forms['imageChange']['fileToUpload'].files[0].name);
     reload();

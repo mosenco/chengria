@@ -30,7 +30,7 @@ if(!empty($_SESSION["username"]))
         </div>
         <div class="row">
             <div class="col">
-                <form method="POST" action="php/LoginResponse.php">
+                <form method="POST" action="php/loginResponse.php">
                     <div class="form-group">
                         <label>Username</label>
                         <input name="Username" type="text" class="form-control" id="idusername" placeholder="Username"
@@ -51,7 +51,7 @@ if(!empty($_SESSION["username"]))
         </div>
     </div>
 
-    <script src="js/RegistrationControl.js"></script>
+    <script src="js/registrationControl.js"></script>
 
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
         integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
