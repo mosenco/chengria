@@ -7,6 +7,7 @@ if(isset($_SESSION) &&  !empty($_SESSION["username"])) {
     header("refresh:3;url=../index.php");
     ob_end_flush();
     $response = "Sei già loggato";
+    printPage($response);
     
 }else{
     $response = "Caricamento...";
@@ -29,9 +30,10 @@ if(isset($_SESSION) &&  !empty($_SESSION["username"])) {
     if(!isset($_POST["Username"]) || empty($_POST["Username"]) 
     || !isset($_POST["Pass"]) || empty($_POST["Pass"])) {
         $response = "errore  di autenticazione";
-
+        printPage($response);
         $stmt->close();
         $conn->close();
+        header('refresh:1;url= ../login.php');
         return;
     }
 
@@ -41,8 +43,10 @@ if(isset($_SESSION) &&  !empty($_SESSION["username"])) {
 
     if(!$stmt->execute()) {
         $response = "Errore durante l'operazione, riprovare";
+        printPage($response);
         $stmt->close();
         $conn->close();
+        header('refresh:1;url= ../login.php');
         return;
     }
 
@@ -54,9 +58,12 @@ if(isset($_SESSION) &&  !empty($_SESSION["username"])) {
     //check sulla correttezza dei dati
     if($stmt->num_rows != 1) {
         $response = "Username o password sbagliato";
+        printPage($response);
         $stmt->close();
         $conn->close();
-    return;}
+        header('refresh:1;url= ../login.php');
+        return;
+    }
 
     // Recupero il parametro 'user-agent' relativo all'utente corrente.
     $user_browser = $_SERVER['HTTP_USER_AGENT']; 
@@ -69,8 +76,12 @@ if(isset($_SESSION) &&  !empty($_SESSION["username"])) {
     $stmt->close();
     $conn->close();
     header('refresh:0;url= ../index.php');
+    printPage($response);
 }
-echo '<!DOCTYPE html>
+
+
+function printPage($response){
+    echo '<!DOCTYPE html>
 <html lang="it">
 <head>
     
@@ -105,5 +116,6 @@ echo '<!DOCTYPE html>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 </body>
-</html>'
+</html>';
+}
 ?>
