@@ -13,10 +13,10 @@
  
     <title>Benvenuti a GamingDevNet</title>
 </head>
-<body>
+<body onload="LoadGameList()">
     
     
-    <?php 
+<?php 
         include 'php/Navbar.php';
     
         if(empty($_SESSION["username"])){
@@ -24,7 +24,6 @@
             <p class=" text-muted text-center">riesegui il login</p>';
             return;
         }else{
-
         }
     ?>
     

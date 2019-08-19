@@ -1,5 +1,4 @@
 <?php
-
 if(empty($_SESSION["username"])){
     
     echo '<nav class="navbar navbar-expand-lg sticky-top navbar-light bg-light">
