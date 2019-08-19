@@ -35,7 +35,23 @@ function confirmPassword(username){
     xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
     xhttp.send("Username=" + username + "&OldPw=" + document.getElementById("password1").value + 
     "&NewPw=" + document.getElementById("password2").value);
-    //reload();
+    reload();
+}
+
+
+function confirmImage(username){
+
+    var xhttp = new XMLHttpRequest();
+    xhttp.onreadystatechange = function() {
+        if (this.readyState == 4 && this.status == 200) {
+            console.log(this.responseText);
+        }
+    };
+
+    xhttp.open("POST", "php/ModifyImage.php", true);
+    xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+    xhttp.send("Username=" + username + "&img=" + document.forms['imageChange']['fileToUpload'].files[0].name);
+    reload();
 }
 
 function checkEqualPw(pw1, pw2){
