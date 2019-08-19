@@ -45,4 +45,5 @@ function checkEqualPw(pw1, pw2){
 function reload(){
     console.log("reloaded");
     location.reload();
+
 }

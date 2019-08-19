@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <?php include 'php/Session.php';
 if(empty($_SESSION["username"])) 
     header('refresh:0;url=index.php');
@@ -187,5 +188,4 @@ include 'php/RetrieveData.php';
         integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
     </script>
 </body>
-
 </html>
