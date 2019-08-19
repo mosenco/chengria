@@ -1,8 +1,8 @@
 <?php
-include "Session.php";
+include "session.php";
 
 if($_POST["Avatar"] != ""){
-    include "UploadToAvatars.php";
+    include "uploadToAvatars.php";
 }
 
 $stmt = $conn->prepare("UPDATE user SET email=? WHERE username=?");

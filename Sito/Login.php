@@ -20,7 +20,7 @@ if(!empty($_SESSION["username"]))
 
 
     <?php 
-        include 'php/Navbar.php';
+        include 'php/navbar.php';
     ?>
     <div class="container">
         <div class="row">

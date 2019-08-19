@@ -1,5 +1,5 @@
 <?php 
-include "Session.php";
+include "session.php";
 $target_dir = "../avatars/";
 $target_file = $target_dir . basename($_SESSION["username"]."_".$_FILES["fileToUpload"]["name"]);
 $uploadOk = 1;

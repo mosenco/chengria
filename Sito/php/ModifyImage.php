@@ -1,5 +1,5 @@
 <?php
-include "Session.php";
+include "session.php";
 if($_POST["img"] == "") 
     $image = "default.jpg";
 else   

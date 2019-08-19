@@ -17,7 +17,7 @@
     
     
 <?php 
-        include 'php/Navbar.php';
+        include 'php/navbar.php';
     
         if(empty($_SESSION["username"])){
             echo'<h1 class="display-1 font-weight-bold text-danger text-center">ACCESSO NEGATO</h1>

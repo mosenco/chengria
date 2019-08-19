@@ -1,4 +1,4 @@
-<?php include 'php/Session.php';
+<?php include 'php/session.php';
 if(empty($_SESSION["username"])) 
     header('refresh:0;url=index.php');
 $username = $_SESSION['username'];
@@ -18,7 +18,7 @@ $username = $_SESSION['username'];
 
 <body>
     <?php 
-        include 'php/Navbar.php';
+        include 'php/navbar.php';
     ?>
 
     <!-- Upload di zip --->

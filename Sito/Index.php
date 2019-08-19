@@ -1,9 +1,9 @@
 <?php 
     include 'php/session.php';  
     if(empty($_SESSION["username"])){
-        include 'IndexVisitor.php';
+        include 'indexVisitor.php';
     }else{
-        include 'IndexUser.php';
+        include 'indexUser.php';
     }
     
 ?>

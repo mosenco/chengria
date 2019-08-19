@@ -1,5 +1,5 @@
 <?php
-include "Session.php";
+include "session.php";
 $stmt = $conn->prepare("UPDATE user SET password=? WHERE username=? AND password=?");          
 $stmt->bind_param('sss', $pwNew, $_POST["Username"], $pwOld);
 /* Set our params */

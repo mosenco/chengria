@@ -15,7 +15,7 @@
 <body onload="acceptCondition()">
     
     <?php 
-        include 'php/Navbar.php';
+        include 'php/navbar.php';
     ?>
     
     <div class="container">

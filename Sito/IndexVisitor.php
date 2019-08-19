@@ -18,7 +18,7 @@
     
     
     <?php 
-        include 'php/Navbar.php';
+        include 'php/navbar.php';
     
       if(empty($_SESSION["username"])){
         
