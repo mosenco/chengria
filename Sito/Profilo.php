@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 <?php include 'php/Session.php';
 if(empty($_SESSION["username"])) 
     header('refresh:0;url=index.php');
@@ -34,54 +33,47 @@ include 'php/RetrieveData.php';
                 <table class="table table-borderless table-hover">
                     <tbody>
                         <tr>
-                            <th scope="row"><img height="60" width="60" src="avatars/<?php echo $imgprofilo; ?>"></th>
-                            
-                        </tr>
-                        <tr>
                             <th scope="row" >Username</th>
-                            <td id="Username">
-                                <?php if(isset($username)) echo $username;
-                                else echo '/';?>
+                            <td>
+                                <?php
+                                    echo $username;
+                                ?>
                             </td>
                         </tr>
                         <tr>
                             <th scope="row">Nome</th>
-                            <td><?php if(isset($name)) echo $name;
-                            else echo '/';?></td>
+                            <td>Chenghao</td>
                         </tr>
                         <tr>
                             <th scope="row">Cognome</th>
-                            <td><?php if(isset($surname)) echo $surname;
-                            else echo '/';?></td>
+                            <td>Xia</td>
                         </tr>
                         <tr>
                             <th scope="row">Data di nascita</th>
-                            <td><?php if(isset($dateOfBirth)) echo $dateOfBirth;
-                            else echo '/'?></td>
+                            <td>18/01/1995</td>
                         </tr>
                         <tr>
                             <th scope="row">Data di iscrizione</th>
-                            <td><?php if(isset($dateOfSub)) echo $dateOfSub;
-                            else echo '/';?></td>
+                            <td>17/08/2019</td>
                         </tr>
                         <tr>
                             <th scope="row">Email</th>
                             <td>
-                                <?php if(isset($email)) echo $email;
-                                else echo '/';?>
+                                <?php
+                                echo $email;
+                                ?>
                             </td>
                         </tr>
                     </tbody>
                 </table>
             </div>
         </div>
-        <input type="button" class="btn btn-danger" id="modify" value="Modifica dati" data-toggle="modal" data-target="#modifyModal">
-        <input type="button" class="btn btn-danger" id="modifyPassword" value="Modifica password" data-toggle="modal" data-target="#modifyPasswordModal">
+        <input type="button" class="btn btn-danger" id="modify" value="Modifica" data-toggle="modal" data-target="#modifyModal">
     </div>
     
 
     <!-- Modal -->
-    <div class="modal fade" id="modifyModal" tabindex="1" role="dialog" aria-labelledby="exampleModalLabel"
+    <div class="modal fade" id="modifyModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
         aria-hidden="true">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
@@ -95,23 +87,24 @@ include 'php/RetrieveData.php';
                     <table class="table table-borderless table-hover">
                     <tbody>
                         <tr>
-                            <th scope="row">Immagine profilo</th>
-                            <td><input type="file" name="fileToUpload" id="fileToUpload" value="default"></td>
+                            <th scope="row">Username</th>
+                            <td><?php echo $username ?></td>
                         </tr>
                         <tr>
                             <th scope="row">Nome</th>
-                            <td><input name="Name" type="text" class="form-control" id="Name" placeholder="Nome" 
-                            value="<?php if(isset($name)) echo $name;?>" required valid></td>
+                            <td>Chenghao</td>
                         </tr>
                         <tr>
                             <th scope="row">Cognome</th>
-                            <td><input name="Surname" type="text" class="form-control" id="Surname" placeholder="Cognome" 
-                            value="<?php if(isset($surname)) echo $surname;?>" required valid></td>
+                            <td>Xia</td>
                         </tr>
                         <tr>
                             <th scope="row">Data di nascita</th>
-                            <td><input name="DateOfBirth" type="date" class="form-control" id="DateOfBirth" placeholder="Data di nascita" 
-                            value="<?php if(isset($dateOfBirth)) echo $dateOfBirth;?>" required valid></td>
+                            <td>18/01/1995</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Data di iscrizione</th>
+                            <td>17/08/2019</td>
                         </tr>
                         <tr>
                             <th scope="row">Email</th>
@@ -124,55 +117,11 @@ include 'php/RetrieveData.php';
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-dismiss="modal" onclick="reload()">Close</button>
-                    <button type="button" class="btn btn-primary" data-dismiss="modal" onclick="confirm('<?php echo $username; ?>')">Save changes</button>
+                    <button type="button" class="btn btn-primary" data-dismiss="modal" onclick="confirm('<?php echo $username.', '.$email?>')">Save changes</button>
                 </div>
             </div>
         </div>
     </div>
-
-
-    <!-- Modal password -->
-    <div class="modal fade" id="modifyPasswordModal" tabindex="2" role="dialog" aria-labelledby="exampleModalLabel"
-        aria-hidden="true">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">Modifica la password</h5>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-                </div>
-                <div class="modal-body">
-                    <table class="table table-borderless table-hover">
-                    <tbody>
-                        <tr>
-                            <th scope="row">Password attuale</th>
-                            <td>
-                            <input name="password1" type="password" class="form-control" id="password1" placeholder="Password attuale"
-                             required valid></td>
-                            </td>
-                        </tr>
-                        <tr>
-                            <th scope="row">Password nuova</th>
-                            <td><input name="password2" type="password" class="form-control" id="password2" placeholder="Password nuova"
-                             required valid></td>
-                        </tr>
-                        <tr>
-                            <th scope="row">Conferma password nuova</th>
-                            <td><input name="password3" type="password" class="form-control" id="password3" placeholder="Conferma password" 
-                            required valid></td>
-                        </tr>
-                    </tbody>
-                </table>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal" onclick="reload()">Close</button>
-                    <button type="button" class="btn btn-primary" data-dismiss="modal" onclick="confirmPassword('<?php echo $username;?>')">Save changes</button>
-                </div>
-            </div>
-        </div>
-    </div>
-
 
 
     <script src="js/RegistrationControl.js"></script>
@@ -188,4 +137,5 @@ include 'php/RetrieveData.php';
         integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
     </script>
 </body>
+
 </html>

@@ -1,10 +1,5 @@
 <?php
 include "Session.php";
-
-if($_POST["Avatar"] != ""){
-    include "UploadToAvatars.php";
-}
-
 $stmt = $conn->prepare("UPDATE user SET email=? WHERE username=?");
 /* Bind our params */                           
 $stmt->bind_param('ss', $_POST["Email"], $_POST["Username"]);
