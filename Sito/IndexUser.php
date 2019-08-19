@@ -27,28 +27,65 @@
         }
     ?>
     
-        <div class="container">
-            <h1 class="display-1 font-weight-bold text-danger text-center">SEI LOGGATO xd</h1>
-    </div>
-    <div class="container-fluid">
-            <div class="row">
-                <div class="col"> sezione menu</div>
-                <div class="col"> 
-                <a href="ViewGame.php?game=testgame">
-                    <img src="images/148910_preview.png" alt="..." class="img-thumbnail" style="width:200px; height:200px;">
-                    <p>Chess Game</p>
-                    <p class=" text-muted ">Gioco di scacchi figo, da provare xd</p>
-                </a> 
-                <a href="ViewGame.php?game=2048">
-                    <img src="images/148910_preview.png" alt="..." class="img-thumbnail" style="width:200px; height:200px;">
-                    <p>2048</p>
-                    <p class=" text-muted ">2048 ora anche sul web!</p>
-                </a>   
-            </div>
-
         
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-2  bg-light m-3 p-4"> 
+                <p class="font-weight-bold"> BROWSE GENRE</p>
+                <div class="row">
+                    <div class="col">
+                        <p class="font-weight-ligh"> Feaured </p>
+                        <p class="font-weight-ligh"> Action </p>
+                        <p class="font-weight-ligh"> Adventures </p>
+                        <p class="font-weight-ligh"> Fantasy </p>
+                    </div>
+                    <div class="col">
+                        <p class="font-weight-ligh"> Horror </p>
+                        <p class="font-weight-ligh"> RPG </p>
+                        <p class="font-weight-ligh"> FPS </p>
+                        <p class="font-weight-ligh"> Strategy </p>
+                    </div>
+                </div>
+                
+                <p class="font-weight-bold mt-3"> COMMUNITY </p>
+
+                <div class="row">
+                    <div class="col">
+                        <p class="font-weight-ligh"> Top Players </p>
+                        <p class="font-weight-ligh"> Top Developers </p>
+                        <p class="font-weight-ligh"> Forum </p>
+                    </div>
+                    <div class="col">
+                        <p class="font-weight-ligh"> Contact Us </p>
+                        <p class="font-weight-ligh"> Work with Us </p>
+                    </div>
+                </div>
+
+            
+            </div>
+            <div class="col-md"> 
+               
+                 
+
+                <ul class="nav">
+                    <li class="nav-item p-3">
+                        <a href="ViewGame.php?game=testgame">
+                            <img src="images/148910_preview.png" alt="..." class="img-thumbnail" style="width:200px; height:200px;">
+                            <p>Chess Game</p>
+                        </a> 
+                    </li>
+                    <li class="nav-item p-3">
+                        <a href="ViewGame.php?game=2048">
+                            <img src="images/148910_preview.png" alt="..." class="img-thumbnail" style="width:200px; height:200px;">
+                            <p>2048</p>
+                        </a>  
+                    </li>
+                </ul>
+                
+                
             </div>
         </div>
+    </div>
         
    
     
